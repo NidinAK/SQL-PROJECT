@@ -1,5 +1,3 @@
-GUIDED BY ALEX THE ANALYST
-
 Created world_layoffs schema
 --- Imported the dataset from the local disk
 --- Created a copy of the raw table and worked with the new table [layoffs_staging]
