@@ -1,0 +1,21 @@
+GUIDED BY ALEX THE ANALYST
+
+Created world_layoffs schema
+--- Imported the dataset from the local disk
+--- Created a copy of the raw table and worked with the new table [layoffs_staging]
+
+2] Removing duplicates
+--- Identified the duplicates by using cte and assigning row number by partitioning it by every columns as we did not have any unique columns
+--- Created a new table with row number column in that table [layoffs_staging2]
+--- Deleted the duplicates from the layoffs_staging2 table
+--- TO DELETE ROWS FROM MYSQL
+	-- EDIT -> PREFERENCES -> UNCHECK SAFE UPDATES
+	-- QUERY -> RECONNECT TO SERVER
+
+3] Standardizing the data
+--- Removed unnecessary spaces from the company column in [layoffs_staging2]
+--- Corrected the repeating industry names [crypto]
+--- Converted data type of date from str to date
+	--ALTER TABLE ....... MODIFY COLUMN ......... -> To execute the changes
+--- Deleted the total laid off and percentage laid off column with null values
+--- Dropped the row_num column
